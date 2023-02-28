@@ -36,6 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Bump `org.jruby.joni:joni` from 2.1.45 to 2.1.48
 - Bump `org.apache.logging.log4j:log4j-core` from 2.19.0 to 2.20.0
 - Bump `com.azure:azure-storage-common` from 12.19.3 to 12.20.0
+- Bump `com.netflix.nebula:gradle-info-plugin` from 12.0.0 to 12.0.1
 
 ### Changed
 - [CCR] Add getHistoryOperationsFromTranslog method to fetch the history snapshot from translogs ([#3948](https://github.com/opensearch-project/OpenSearch/pull/3948))
