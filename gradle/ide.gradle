@@ -16,6 +16,10 @@ import org.jetbrains.gradle.ext.JUnit
 buildscript {
   repositories {
     maven {
+      allowInsecureProtocol = true
+      url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
       url "https://plugins.gradle.org/m2/"
     }
   }

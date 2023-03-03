@@ -80,13 +80,13 @@ allprojects {
   afterEvaluate {
     project.tasks.withType(Test) { task ->
       // This is so hacky: now, by default, test tasks uses JUnit framework and always includes 'junit'
-      // JARs from the Gradle distribution (no ways to override this behavior). It causes JAR hell on test 
+      // JARs from the Gradle distribution (no ways to override this behavior). It causes JAR hell on test
       // classpath, example of the report:
       //
       //  jar1: /home/ubuntu/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar
       //  jar2: /home/ubuntu/.gradle/wrapper/dists/gradle-8.0-rc-1-all/2p8rgxxewg8l61n1p3vrzr9s8/gradle-8.0-rc-1/lib/junit-4.13.2.jar
-      // 
-      task.getTestFrameworkProperty().convention(getProviderFactory().provider(() -> new JUnitTestFramework(task, task.getFilter(), false)));
+      //
+      // task.getTestFrameworkProperty().convention(getProviderFactory().provider(() -> new JUnitTestFramework(task, task.getFilter(), false)));
     }
   }
 }

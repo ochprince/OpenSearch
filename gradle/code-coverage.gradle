@@ -9,6 +9,10 @@
 apply plugin: 'jacoco'
 
 repositories {
+  maven {
+    allowInsecureProtocol = true
+    url 'https://maven.aliyun.com/nexus/content/groups/public/'
+  }
   mavenCentral()
   gradlePluginPortal()
   // TODO: Find the way to use the repositories from RepositoriesSetupPlugin
@@ -37,7 +41,7 @@ tasks.withType(JacocoReport).configureEach {
 if (System.getProperty("tests.coverage")) {
   reporting {
     reports {
-      testCodeCoverageReport(JacocoCoverageReport) { 
+      testCodeCoverageReport(JacocoCoverageReport) {
         testType = TestSuiteType.UNIT_TEST
       }
     }
@@ -45,6 +49,6 @@ if (System.getProperty("tests.coverage")) {
 
   // Attach code coverage report task to Gradle check task
   project.getTasks().named(JavaBasePlugin.CHECK_TASK_NAME).configure {
-    dependsOn tasks.named('testCodeCoverageReport', JacocoReport) 
+    dependsOn tasks.named('testCodeCoverageReport', JacocoReport)
   }
 }

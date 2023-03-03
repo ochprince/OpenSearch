@@ -93,7 +93,9 @@ dependencies {
   api project(':libs:opensearch-x-content')
   api project(":libs:opensearch-geo")
 
-  compileOnly project(':libs:opensearch-plugin-classloader')
+  // java.lang.NoClassDefFoundError: org/opensearch/plugins/ExtendedPluginsClassLoader
+  // compileOnly -> api
+  api project(':libs:opensearch-plugin-classloader')
   testRuntimeOnly project(':libs:opensearch-plugin-classloader')
 
   // lucene

@@ -280,7 +280,8 @@ if (Os.isFamily(Os.FAMILY_WINDOWS)) {
       Files.exists(path.resolve("bin").resolve("hdfs.dll"))) {
       fixtureSupported = true
     } else {
-      throw new IllegalStateException("HADOOP_HOME: ${path} is invalid, does not contain hadoop native libraries in \$HADOOP_HOME/bin");
+      fixtureSupported = false
+      // throw new IllegalStateException("HADOOP_HOME: ${path} is invalid, does not contain hadoop native libraries in \$HADOOP_HOME/bin");
     }
   }
 } else {

@@ -6,6 +6,10 @@ group 'org.opensearch'
 version '1.0.0-SNAPSHOT'
 
 repositories {
+    maven {
+      allowInsecureProtocol = true
+      url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenCentral()
 }
 

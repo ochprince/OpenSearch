@@ -53,6 +53,10 @@ class OpenSearchTestBasePluginFuncTest extends AbstractGradleFuncTest {
             }
 
             repositories {
+                maven {
+                  allowInsecureProtocol = true
+                  url 'https://maven.aliyun.com/nexus/content/groups/public/'
+                }
                 mavenCentral()
             }
 

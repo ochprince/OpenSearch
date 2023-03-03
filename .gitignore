@@ -6,6 +6,7 @@
 *.iws
 build-idea/
 out/
+home/
 
 # include shared intellij config
 !.idea/inspectionProfiles/Project_Default.xml
