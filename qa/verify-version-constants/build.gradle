@@ -28,10 +28,10 @@
  * under the License.
  */
 
-import org.opensearch.gradle.Version
-import org.opensearch.gradle.VersionProperties
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
+import com.colasoft.opensearch.gradle.Version
+import com.colasoft.opensearch.gradle.VersionProperties
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
 
 apply plugin: 'opensearch.testclusters'
 apply plugin: 'opensearch.standalone-test'

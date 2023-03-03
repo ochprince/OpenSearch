@@ -30,12 +30,12 @@
 
 
 import org.apache.tools.ant.filters.FixCrLfFilter
-import org.opensearch.gradle.ConcatFilesTask
-import org.opensearch.gradle.DependenciesInfoTask
-import org.opensearch.gradle.MavenFilteringHack
-import org.opensearch.gradle.NoticeTask
-import org.opensearch.gradle.VersionProperties
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.ConcatFilesTask
+import com.colasoft.opensearch.gradle.DependenciesInfoTask
+import com.colasoft.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.NoticeTask
+import com.colasoft.opensearch.gradle.VersionProperties
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 import java.nio.file.Files
 import java.nio.file.Path

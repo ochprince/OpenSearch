@@ -42,9 +42,9 @@ import org.apache.lucene.index.SortedNumericDocValues;
 import org.apache.lucene.index.SortedSetDocValues;
 import org.apache.lucene.search.Scorable;
 import org.apache.lucene.util.BytesRef;
-import org.opensearch.index.fielddata.AbstractNumericDocValues;
-import org.opensearch.index.fielddata.AbstractSortedDocValues;
-import org.opensearch.index.mapper.MappedFieldType;
+import com.colasoft.opensearch.index.fielddata.AbstractNumericDocValues;
+import com.colasoft.opensearch.index.fielddata.AbstractSortedDocValues;
+import com.colasoft.opensearch.index.mapper.MappedFieldType;
 
 import java.io.IOException;
 import java.util.Collection;

@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: 'opensearch.opensearchplugin'
 apply plugin: 'opensearch.yaml-rest-test'
@@ -37,7 +37,7 @@ apply plugin: 'opensearch.java-rest-test'
 opensearchplugin {
   name 'rest-handler'
   description 'An example plugin showing how to register a REST handler'
-  classname 'org.opensearch.example.resthandler.ExampleRestHandlerPlugin'
+  classname 'com.colasoft.opensearch.example.resthandler.ExampleRestHandlerPlugin'
   licenseFile rootProject.file('licenses/APACHE-LICENSE-2.0.txt')
   noticeFile rootProject.file('NOTICE.txt')
 }
@@ -45,11 +45,11 @@ opensearchplugin {
 // No unit tests in this example
 test.enabled = false
 
-tasks.register("exampleFixture", org.opensearch.gradle.test.AntFixture) {
+tasks.register("exampleFixture", com.colasoft.opensearch.gradle.test.AntFixture) {
   dependsOn sourceSets.javaRestTest.runtimeClasspath
   env 'CLASSPATH', "${-> project.sourceSets.javaRestTest.runtimeClasspath.asPath}"
   executable = "${BuildParams.runtimeJavaHome}/bin/java"
-  args 'org.opensearch.example.resthandler.ExampleFixture', baseDir, 'TEST'
+  args 'com.colasoft.opensearch.example.resthandler.ExampleFixture', baseDir, 'TEST'
 }
 
 javaRestTest {

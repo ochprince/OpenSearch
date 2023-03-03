@@ -38,7 +38,7 @@ import org.apache.lucene.search.ScoreMode;
 import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.SortField;
 import org.apache.lucene.search.TotalHits;
-import org.opensearch.index.mapper.MappedFieldType;
+import com.colasoft.opensearch.index.mapper.MappedFieldType;
 
 import java.io.IOException;
 import java.util.Collection;

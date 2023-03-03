@@ -19,32 +19,32 @@ updates:
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/distribution/archives/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/distribution/archives/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/distribution/archives/darwin-tar/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/distribution/archives/darwin-tar/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/distribution/archives/oss-darwin-tar/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/distribution/archives/oss-darwin-tar/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/distribution/bwc/bugfix/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/distribution/bwc/bugfix/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:
       interval: weekly
-  - directory: /buildSrc/src/integTest/resources/org/opensearch/gradle/internal/fake_git/remote/distribution/bwc/minor/
+  - directory: /buildSrc/src/integTest/resources/com/colasoft/opensearch/gradle/internal/fake_git/remote/distribution/bwc/minor/
     open-pull-requests-limit: 1
     package-ecosystem: gradle
     schedule:

@@ -167,7 +167,7 @@ distribution_archives {
     }
   }
 
-  
+
   linuxPpc64leTar {
     archiveClassifier = 'linux-ppc64le'
     content {
@@ -201,5 +201,5 @@ subprojects {
   apply plugin: 'distribution'
   apply plugin: 'opensearch.internal-distribution-archive-check'
 
-  group = "org.opensearch.distribution"
+  group = "com.colasoft.opensearch.distribution"
 }

@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.tar.SymbolicLinkPreservingTar
+import com.colasoft.opensearch.gradle.tar.SymbolicLinkPreservingTar
 
 plugins {
   id 'base'

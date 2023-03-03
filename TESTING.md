@@ -90,12 +90,12 @@ This will instruct all JVMs (including any that run cli tools such as creating t
 
 Run a single test case (variants)
 
-    ./gradlew test -Dtests.class=org.opensearch.package.ClassName
+    ./gradlew test -Dtests.class=com.colasoft.opensearch.package.ClassName
     ./gradlew test "-Dtests.class=*.ClassName"
 
 Run all tests in a package and its sub-packages
 
-    ./gradlew test "-Dtests.class=org.opensearch.package.*"
+    ./gradlew test "-Dtests.class=com.colasoft.opensearch.package.*"
 
 Run any test methods that contain *esi* (e.g.: .r*esi*ze.)
 
@@ -207,7 +207,7 @@ Note that this will also run the unit tests and precommit tasks first. If you wa
 
 To run a specific set of tests.
 
-    ./gradlew :server:internalClusterTest --tests "org.opensearch.common.settings.FallbackSettingsIT.*"
+    ./gradlew :server:internalClusterTest --tests "com.colasoft.opensearch.common.settings.FallbackSettingsIT.*"
 
 If you want to just run the precommit checks:
 
@@ -238,7 +238,7 @@ The REST tests are run automatically when executing the "./gradlew check" comman
 A specific test case can be run with the following command:
 
     ./gradlew ':rest-api-spec:yamlRestTest' \
-      --tests "org.opensearch.test.rest.ClientYamlTestSuiteIT" \
+      --tests "com.colasoft.opensearch.test.rest.ClientYamlTestSuiteIT" \
       -Dtests.method="test {p0=cat.segments/10_basic/Help}"
 
 The YAML REST tests support all the options provided by the randomized runner, plus the following:
@@ -254,7 +254,7 @@ For example :
     ./gradlew :modules:mapper-extras:javaRestTest
 
     ./gradlew ':modules:mapper-extras:javaRestTest' \
-      --tests "org.opensearch.index.mapper.TokenCountFieldMapperIntegrationIT.testSearchByTokenCount {storeCountedFields=true loadCountedFields=false}"
+      --tests "com.colasoft.opensearch.index.mapper.TokenCountFieldMapperIntegrationIT.testSearchByTokenCount {storeCountedFields=true loadCountedFields=false}"
 
 yamlRestTest’s and javaRestTest’s are easy to identify, since they are found in a respective source directory. However, there are some more specialized REST tests that use custom task names. These are usually found in "qa" projects commonly use the "integTest" task.
 
@@ -365,9 +365,9 @@ These test tasks can use the `--tests`, `--info`, and `--debug` parameters just 
 
 Backwards compatibility tests exist to test upgrading from each supported version to the current version.
 
-The test can be run for any versions which the current version will be compatible with. Tests are run for released versions download the distributions from the artifact repository, see [DistributionDownloadPlugin](./buildSrc/src/main/java/org/opensearch/gradle/DistributionDownloadPlugin.java) for the repository location. Tests are run for versions that are not yet released automatically check out the branch and build from source to get the distributions, see [BwcVersions](./buildSrc/src/main/java/org/opensearch/gradle/BwcVersions.java) and [distribution/bwc/build.gradle](./distribution/bwc/build.gradle) for more information.
+The test can be run for any versions which the current version will be compatible with. Tests are run for released versions download the distributions from the artifact repository, see [DistributionDownloadPlugin](./buildSrc/src/main/java/com/colasoft/opensearch/gradle/DistributionDownloadPlugin.java) for the repository location. Tests are run for versions that are not yet released automatically check out the branch and build from source to get the distributions, see [BwcVersions](./buildSrc/src/main/java/com/colasoft/opensearch/gradle/BwcVersions.java) and [distribution/bwc/build.gradle](./distribution/bwc/build.gradle) for more information.
 
-The minimum JDK versions for runtime and compiling need to be installed, and environment variables `JAVAx_HOME`, such as `JAVA8_HOME`, pointing to the JDK installations are required to run the tests against unreleased versions, since the distributions are created by building from source. The required JDK versions for each branch are located at [.ci/java-versions.properties](.ci/java-versions.properties), see [BwcSetupExtension](./buildSrc/src/main/java/org/opensearch/gradle/internal/BwcSetupExtension.java) for more information.
+The minimum JDK versions for runtime and compiling need to be installed, and environment variables `JAVAx_HOME`, such as `JAVA8_HOME`, pointing to the JDK installations are required to run the tests against unreleased versions, since the distributions are created by building from source. The required JDK versions for each branch are located at [.ci/java-versions.properties](.ci/java-versions.properties), see [BwcSetupExtension](./buildSrc/src/main/java/com/colasoft/opensearch/gradle/internal/BwcSetupExtension.java) for more information.
 
 To run all the backwards compatibility tests use:
 
@@ -380,7 +380,7 @@ A specific version can be tested as well. For example, to test bwc with version 
 Use -Dtest.class and -Dtests.method to run a specific bwcTest test. For example to test a rolling upgrade from 7.7.0:
 
     ./gradlew :qa:rolling-upgrade:v7.7.0#bwcTest \
-     -Dtests.class=org.opensearch.upgrades.RecoveryIT \
+     -Dtests.class=com.colasoft.opensearch.upgrades.RecoveryIT \
      -Dtests.method=testHistoryUUIDIsGenerated
 
 Use `-PcustomDistributionDownloadType=bundle` to run the bwcTest against the test cluster with latest CI distribution bundle set up for the specified version; this property is default to min and exclusive choices between `bundle` and `min`:

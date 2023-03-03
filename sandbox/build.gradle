@@ -30,5 +30,5 @@
  *   ./gradlew run -Dsandbox.enabled=false
  */
 subprojects {
-  group = 'org.opensearch.sandbox'
+  group = 'com.colasoft.opensearch.sandbox'
 }

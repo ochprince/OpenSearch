@@ -55,10 +55,10 @@ project(':all_classes_in_tasks') {
 project(':not_implementing_base') {
   testingConventions.naming {
     Tests {
-      baseClass 'org.opensearch.gradle.testkit.Unit'
+      baseClass 'com.colasoft.opensearch.gradle.testkit.Unit'
     }
     IT {
-      baseClass 'org.opensearch.gradle.testkit.Integration'
+      baseClass 'com.colasoft.opensearch.gradle.testkit.Integration'
     }
   }
   test {
@@ -85,10 +85,10 @@ project(':valid_setup_with_base') {
   }
   testingConventions.naming {
     Tests {
-      baseClass 'org.opensearch.gradle.testkit.Unit'
+      baseClass 'com.colasoft.opensearch.gradle.testkit.Unit'
     }
     IT {
-      baseClass 'org.opensearch.gradle.testkit.Integration'
+      baseClass 'com.colasoft.opensearch.gradle.testkit.Integration'
     }
   }
 }

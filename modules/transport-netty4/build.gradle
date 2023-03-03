@@ -29,10 +29,10 @@
  */
 
 
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.RestIntegTestTask
-import org.opensearch.gradle.test.rest.JavaRestTestPlugin
-import org.opensearch.gradle.test.InternalClusterTestPlugin
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.test.rest.JavaRestTestPlugin
+import com.colasoft.opensearch.gradle.test.InternalClusterTestPlugin
 
 apply plugin: 'opensearch.yaml-rest-test'
 apply plugin: 'opensearch.java-rest-test'
@@ -49,7 +49,7 @@ apply plugin: 'opensearch.publish'
  */
 opensearchplugin {
   description 'Netty 4 based transport implementation'
-  classname 'org.opensearch.transport.Netty4Plugin'
+  classname 'com.colasoft.opensearch.transport.Netty4Plugin'
   hasClientJar = true
 }
 

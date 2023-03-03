@@ -26,10 +26,10 @@
  * KIND, either express or implied.  See the License for the
  */
 
-import org.opensearch.gradle.LoggedExec
-import org.opensearch.gradle.MavenFilteringHack
-import org.opensearch.gradle.OS
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.LoggedExec
+import com.colasoft.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.OS
+import com.colasoft.opensearch.gradle.info.BuildParams
 import org.redline_rpm.header.Flags
 
 import java.nio.file.Files

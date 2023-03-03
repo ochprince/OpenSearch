@@ -33,7 +33,7 @@ apply plugin: 'opensearch.publish'
 
 dependencies {
   testImplementation(project(":test:framework")) {
-    exclude group: 'org.opensearch', module: 'opensearch-geo'
+    exclude group: 'com.colasoft.opensearch', module: 'opensearch-geo'
   }
 }
 

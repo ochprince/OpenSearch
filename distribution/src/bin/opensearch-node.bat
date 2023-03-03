@@ -3,7 +3,7 @@
 setlocal enabledelayedexpansion
 setlocal enableextensions
 
-set OPENSEARCH_MAIN_CLASS=org.opensearch.cluster.coordination.NodeToolCli
+set OPENSEARCH_MAIN_CLASS=com.colasoft.opensearch.cluster.coordination.NodeToolCli
 call "%~dp0opensearch-cli.bat" ^
   %%* ^
   || goto exit

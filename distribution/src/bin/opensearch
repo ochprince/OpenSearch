@@ -31,7 +31,7 @@ for option in "$@"; do
 done
 
 if [ -z "$OPENSEARCH_TMPDIR" ]; then
-  OPENSEARCH_TMPDIR=`"$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" org.opensearch.tools.launchers.TempDirectory`
+  OPENSEARCH_TMPDIR=`"$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" com.colasoft.opensearch.tools.launchers.TempDirectory`
 fi
 
 # get keystore password before setting java options to avoid
@@ -54,7 +54,7 @@ fi
 #   - second, JVM options are read from jvm.options and jvm.options.d/*.options
 #   - third, JVM options from OPENSEARCH_JAVA_OPTS are applied
 #   - fourth, ergonomic JVM options are applied
-OPENSEARCH_JAVA_OPTS=`export OPENSEARCH_TMPDIR; "$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" org.opensearch.tools.launchers.JvmOptionsParser "$OPENSEARCH_PATH_CONF"`
+OPENSEARCH_JAVA_OPTS=`export OPENSEARCH_TMPDIR; "$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" com.colasoft.opensearch.tools.launchers.JvmOptionsParser "$OPENSEARCH_PATH_CONF"`
 
 # manual parsing to find out, if process should be detached
 if [[ $DAEMONIZE = false ]]; then
@@ -67,7 +67,7 @@ if [[ $DAEMONIZE = false ]]; then
     -Dopensearch.distribution.type="$OPENSEARCH_DISTRIBUTION_TYPE" \
     -Dopensearch.bundled_jdk="$OPENSEARCH_BUNDLED_JDK" \
     -cp "$OPENSEARCH_CLASSPATH" \
-    org.opensearch.bootstrap.OpenSearch \
+    com.colasoft.opensearch.bootstrap.OpenSearch \
     "$@" <<<"$KEYSTORE_PASSWORD"
 else
   exec \
@@ -79,7 +79,7 @@ else
     -Dopensearch.distribution.type="$OPENSEARCH_DISTRIBUTION_TYPE" \
     -Dopensearch.bundled_jdk="$OPENSEARCH_BUNDLED_JDK" \
     -cp "$OPENSEARCH_CLASSPATH" \
-    org.opensearch.bootstrap.OpenSearch \
+    com.colasoft.opensearch.bootstrap.OpenSearch \
     "$@" \
     <<<"$KEYSTORE_PASSWORD" &
   retval=$?

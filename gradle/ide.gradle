@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 import org.jetbrains.gradle.ext.Remote
 import org.jetbrains.gradle.ext.JUnit
 

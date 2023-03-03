@@ -1,1 +1,1 @@
-org.opensearch.search.aggregations.matrix.spi.MatrixStatsNamedXContentProvider
+com.colasoft.opensearch.search.aggregations.matrix.spi.MatrixStatsNamedXContentProvider

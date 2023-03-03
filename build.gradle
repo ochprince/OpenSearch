@@ -35,12 +35,12 @@ import com.avast.gradle.dockercompose.tasks.ComposePull
 import com.github.jengelman.gradle.plugins.shadow.ShadowPlugin
 import de.thetaphi.forbiddenapis.gradle.ForbiddenApisPlugin
 import org.apache.tools.ant.taskdefs.condition.Os
-import org.opensearch.gradle.BuildPlugin
-import org.opensearch.gradle.Version
-import org.opensearch.gradle.VersionProperties
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.plugin.PluginBuildPlugin
-import org.opensearch.gradle.tar.SymbolicLinkPreservingTar
+import com.colasoft.opensearch.gradle.BuildPlugin
+import com.colasoft.opensearch.gradle.Version
+import com.colasoft.opensearch.gradle.VersionProperties
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.plugin.PluginBuildPlugin
+import com.colasoft.opensearch.gradle.tar.SymbolicLinkPreservingTar
 import org.gradle.plugins.ide.eclipse.model.AccessRule
 import org.gradle.plugins.ide.eclipse.model.EclipseJdt
 import org.gradle.plugins.ide.eclipse.model.SourceFolder
@@ -48,7 +48,7 @@ import org.gradle.api.Project;
 import org.gradle.api.internal.tasks.testing.junit.JUnitTestFramework
 import org.gradle.process.ExecResult;
 
-import static org.opensearch.gradle.util.GradleUtils.maybeConfigure
+import static com.colasoft.opensearch.gradle.util.GradleUtils.maybeConfigure
 
 plugins {
   id 'lifecycle-base'
@@ -73,7 +73,7 @@ apply from: 'gradle/code-coverage.gradle'
 
 // common maven publishing configuration
 allprojects {
-  group = 'org.opensearch'
+  group = 'com.colasoft.opensearch'
   version = VersionProperties.getOpenSearch()
   description = "OpenSearch subproject ${project.path}"
 
@@ -214,7 +214,7 @@ tasks.register("verifyVersions") {
     // Read the list from maven central.
     // Fetch the metadata and parse the xml into Version instances because it's more straight forward here
     // rather than bwcVersion ( VersionCollection ).
-    new URL('https://repo1.maven.org/maven2/org/opensearch/opensearch/maven-metadata.xml').openStream().withStream { s ->
+    new URL('https://repo1.maven.org/maven2/com/colasoft/opensearch/opensearch/maven-metadata.xml').openStream().withStream { s ->
       BuildParams.bwcVersions.compareToAuthoritative(
         new XmlParser().parse(s)
           .versioning.versions.version
@@ -348,8 +348,8 @@ allprojects {
 
   project.afterEvaluate {
     // Handle javadoc dependencies across projects. Order matters: the linksOffline for
-    // org.opensearch:opensearch must be the last one or all the links for the
-    // other packages (e.g org.opensearch.client) will point to server rather than
+    // com.colasoft.opensearch:opensearch must be the last one or all the links for the
+    // other packages (e.g com.colasoft.opensearch.client) will point to server rather than
     // their own artifacts.
     if (project.plugins.hasPlugin(BuildPlugin) || project.plugins.hasPlugin(PluginBuildPlugin)) {
       String artifactsHost = VersionProperties.getOpenSearch().endsWith("-SNAPSHOT")
@@ -587,7 +587,7 @@ gradle.projectsEvaluated {
 }
 
 allprojects {
-  tasks.register('resolveAllDependencies', org.opensearch.gradle.ResolveAllDependencies) {
+  tasks.register('resolveAllDependencies', com.colasoft.opensearch.gradle.ResolveAllDependencies) {
     configs = project.configurations
     if (project.path.contains("fixture")) {
       dependsOn tasks.withType(ComposePull)

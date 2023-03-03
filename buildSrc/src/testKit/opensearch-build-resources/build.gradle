@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.ExportOpenSearchBuildResourcesTask
+import com.colasoft.opensearch.gradle.ExportOpenSearchBuildResourcesTask
 
 plugins {
   id 'base'

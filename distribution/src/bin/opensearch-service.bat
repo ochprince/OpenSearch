@@ -121,7 +121,7 @@ if exist "%JAVA_HOME%\bin\server\jvm.dll" (
 
 :foundJVM
 if not defined OPENSEARCH_TMPDIR (
-  for /f "tokens=* usebackq" %%a in (`CALL "%JAVA%" -cp "!OPENSEARCH_CLASSPATH!" "org.opensearch.tools.launchers.TempDirectory"`) do set OPENSEARCH_TMPDIR=%%a
+  for /f "tokens=* usebackq" %%a in (`CALL "%JAVA%" -cp "!OPENSEARCH_CLASSPATH!" "com.colasoft.opensearch.tools.launchers.TempDirectory"`) do set OPENSEARCH_TMPDIR=%%a
 )
 
 rem The JVM options parser produces the final JVM options to start
@@ -135,7 +135,7 @@ rem   - third, JVM options from OPENSEARCH_JAVA_OPTS are applied
 rem   - fourth, ergonomic JVM options are applied
 
 @setlocal
-for /F "usebackq delims=" %%a in (`CALL "%JAVA%" -cp "!OPENSEARCH_CLASSPATH!" "org.opensearch.tools.launchers.JvmOptionsParser" "!OPENSEARCH_PATH_CONF!" ^|^| echo jvm_options_parser_failed`) do set OPENSEARCH_JAVA_OPTS=%%a
+for /F "usebackq delims=" %%a in (`CALL "%JAVA%" -cp "!OPENSEARCH_CLASSPATH!" "com.colasoft.opensearch.tools.launchers.JvmOptionsParser" "!OPENSEARCH_PATH_CONF!" ^|^| echo jvm_options_parser_failed`) do set OPENSEARCH_JAVA_OPTS=%%a
 @endlocal & set "MAYBE_JVM_OPTIONS_PARSER_FAILED=%OPENSEARCH_JAVA_OPTS%" & set OPENSEARCH_JAVA_OPTS=%OPENSEARCH_JAVA_OPTS%
 
 if "%MAYBE_JVM_OPTIONS_PARSER_FAILED%" == "jvm_options_parser_failed" (
@@ -222,7 +222,7 @@ if not "%SERVICE_USERNAME%" == "" (
 	)
 )
 rem //IS == Install Service
-"%EXECUTABLE%" //IS//%SERVICE_ID% --Startup %OPENSEARCH_START_TYPE% --StopTimeout %OPENSEARCH_STOP_TIMEOUT% --StartClass org.opensearch.bootstrap.OpenSearch --StartMethod main ++StartParams --quiet --StopClass org.opensearch.bootstrap.OpenSearch --StopMethod close --Classpath "%OPENSEARCH_CLASSPATH%" --JvmMs %JVM_MS% --JvmMx %JVM_MX% --JvmSs %JVM_SS% --JvmOptions %OTHER_JAVA_OPTS% ++JvmOptions %OPENSEARCH_PARAMS% %LOG_OPTS% --PidFile "%SERVICE_ID%.pid" --DisplayName "%SERVICE_DISPLAY_NAME%" --Description "%SERVICE_DESCRIPTION%" --Jvm "%JAVA_HOME%%JVM_DLL%" --StartMode jvm --StopMode jvm --StartPath "%OPENSEARCH_HOME%" %SERVICE_PARAMS% ++Environment HOSTNAME="%%COMPUTERNAME%%"
+"%EXECUTABLE%" //IS//%SERVICE_ID% --Startup %OPENSEARCH_START_TYPE% --StopTimeout %OPENSEARCH_STOP_TIMEOUT% --StartClass com.colasoft.opensearch.bootstrap.OpenSearch --StartMethod main ++StartParams --quiet --StopClass com.colasoft.opensearch.bootstrap.OpenSearch --StopMethod close --Classpath "%OPENSEARCH_CLASSPATH%" --JvmMs %JVM_MS% --JvmMx %JVM_MX% --JvmSs %JVM_SS% --JvmOptions %OTHER_JAVA_OPTS% ++JvmOptions %OPENSEARCH_PARAMS% %LOG_OPTS% --PidFile "%SERVICE_ID%.pid" --DisplayName "%SERVICE_DISPLAY_NAME%" --Description "%SERVICE_DESCRIPTION%" --Jvm "%JAVA_HOME%%JVM_DLL%" --StartMode jvm --StopMode jvm --StartPath "%OPENSEARCH_HOME%" %SERVICE_PARAMS% ++Environment HOSTNAME="%%COMPUTERNAME%%"
 
 if not errorlevel 1 goto installed
 echo Failed installing '%SERVICE_ID%' service

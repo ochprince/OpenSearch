@@ -1,1 +1,1 @@
-org.opensearch.common.xcontent.SuggestingErrorOnUnknown
+com.colasoft.opensearch.common.xcontent.SuggestingErrorOnUnknown

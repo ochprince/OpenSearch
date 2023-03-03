@@ -9,13 +9,13 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.Architecture
-import org.opensearch.gradle.DockerBase
-import org.opensearch.gradle.LoggedExec
-import org.opensearch.gradle.VersionProperties
-import org.opensearch.gradle.docker.DockerBuildTask
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.testfixtures.TestFixturesPlugin
+import com.colasoft.opensearch.gradle.Architecture
+import com.colasoft.opensearch.gradle.DockerBase
+import com.colasoft.opensearch.gradle.LoggedExec
+import com.colasoft.opensearch.gradle.VersionProperties
+import com.colasoft.opensearch.gradle.docker.DockerBuildTask
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.testfixtures.TestFixturesPlugin
 import org.gradle.internal.os.OperatingSystem
 
 apply plugin: 'opensearch.standalone-rest-test'
@@ -172,8 +172,8 @@ opensearch_distributions {
 tasks.named("preProcessFixture").configure {
   dependsOn opensearch_distributions.docker
   // always run the task, otherwise the folders won't be created
-  outputs.upToDateWhen { 
-    false 
+  outputs.upToDateWhen {
+    false
   }
   doLast {
     // tests expect to have an empty repo
@@ -213,7 +213,7 @@ void addBuildDockerImage(Architecture architecture, DockerBase base) {
 
     String version = VersionProperties.getOpenSearch()
       tags = [
-        "docker.opensearch.org/opensearch:${version}",
+        "docker.opensearch.com/colasoft/opensearch:${version}",
         "opensearch:test"
       ]
   }

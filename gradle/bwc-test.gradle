@@ -9,8 +9,8 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.Version
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.Version
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 ext.bwcTaskName = { Version version ->
   return "v${version}#bwcTest"

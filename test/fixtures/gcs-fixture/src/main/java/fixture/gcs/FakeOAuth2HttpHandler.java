@@ -33,8 +33,8 @@ package fixture.gcs;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import org.opensearch.common.SuppressForbidden;
-import org.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.common.SuppressForbidden;
+import com.colasoft.opensearch.rest.RestStatus;
 
 import java.io.IOException;
 

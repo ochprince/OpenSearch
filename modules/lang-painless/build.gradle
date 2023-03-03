@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.testclusters.DefaultTestClustersTask;
+import com.colasoft.opensearch.gradle.testclusters.DefaultTestClustersTask;
 import com.github.jengelman.gradle.plugins.shadow.ShadowBasePlugin
 
 apply plugin: 'opensearch.validate-rest-spec'
@@ -37,7 +37,7 @@ apply plugin: 'com.github.johnrengelman.shadow'
 
 opensearchplugin {
   description 'An easy, safe and fast scripting language for OpenSearch'
-  classname 'org.opensearch.painless.PainlessPlugin'
+  classname 'com.colasoft.opensearch.painless.PainlessPlugin'
 }
 
 ext {
@@ -72,7 +72,7 @@ test {
 
 shadowJar {
   archiveClassifier.set('')
-  relocate 'org.objectweb', 'org.opensearch.repackage.org.objectweb'
+  relocate 'org.objectweb', 'com.colasoft.opensearch.repackage.org.objectweb'
   dependencies {
     include(dependency("org.ow2.asm:asm:${versions.asm}"))
     include(dependency("org.ow2.asm:asm-util:${versions.asm}"))
@@ -108,7 +108,7 @@ tasks.named("test").configure {
 tasks.register("apiJavadoc", Javadoc) {
   source = sourceSets.main.allJava
   classpath = sourceSets.main.runtimeClasspath
-  include '**/org/opensearch/painless/api/'
+  include '**/com/colasoft/opensearch/painless/api/'
   destinationDir = new File(docsDir, 'apiJavadoc')
 }
 
@@ -144,7 +144,7 @@ tasks.register("generateContextDoc", DefaultTestClustersTask) {
   useCluster testClusters.generateContextCluster
   doFirst {
     project.javaexec {
-      mainClass = 'org.opensearch.painless.ContextDocGenerator'
+      mainClass = 'com.colasoft.opensearch.painless.ContextDocGenerator'
       classpath = sourceSets.doc.runtimeClasspath
       systemProperty "cluster.uri", "${-> testClusters.generateContextCluster.singleNode().getAllHttpSocketURI().get(0)}"
     }.assertNormalExitValue()
@@ -164,7 +164,7 @@ dependencies {
 }
 
 String grammarPath = 'src/main/antlr'
-String outputPath = 'src/main/java/org/opensearch/painless/antlr'
+String outputPath = 'src/main/java/com/colasoft/opensearch/painless/antlr'
 
 tasks.register("cleanGenerated", Delete) {
   delete fileTree(grammarPath) {
@@ -184,7 +184,7 @@ tasks.register("regenLexer", JavaExec) {
   systemProperty 'user.country', 'US'
   systemProperty 'user.variant', ''
   args '-Werror',
-    '-package', 'org.opensearch.painless.antlr',
+    '-package', 'com.colasoft.opensearch.painless.antlr',
     '-o', outputPath,
     "${file(grammarPath)}/PainlessLexer.g4"
 }
@@ -198,7 +198,7 @@ tasks.register("regenParser", JavaExec) {
   systemProperty 'user.country', 'US'
   systemProperty 'user.variant', ''
   args '-Werror',
-    '-package', 'org.opensearch.painless.antlr',
+    '-package', 'com.colasoft.opensearch.painless.antlr',
     '-no-listener',
     '-visitor',
     // '-Xlog',

@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.BuildPlugin
+import com.colasoft.opensearch.gradle.BuildPlugin
 
 /*
  * This script plugin configures formatting for Java source using Spotless
@@ -75,7 +75,7 @@ allprojects {
                     throw new AssertionError("Do not use wildcard imports.  'spotlessApply' cannot resolve this issue.")
                 }
           }
-          
+
           // See DEVELOPER_GUIDE.md for details of when to enable this.
           if (System.getProperty('spotless.paddedcell') != null) {
             paddedCell()

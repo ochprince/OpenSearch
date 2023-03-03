@@ -9,8 +9,8 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.precommit.ThirdPartyAuditPrecommitPlugin
-import org.opensearch.gradle.precommit.ThirdPartyAuditTask
+import com.colasoft.opensearch.gradle.precommit.ThirdPartyAuditPrecommitPlugin
+import com.colasoft.opensearch.gradle.precommit.ThirdPartyAuditTask
 
 
 plugins {
@@ -41,7 +41,7 @@ repositories {
 
 dependencies {
   forbiddenApisCliJar 'de.thetaphi:forbiddenapis:3.3'
-  jdkJarHell 'org.opensearch:opensearch-core:current'
+  jdkJarHell 'com.colasoft.opensearch:opensearch-core:current'
   compileOnly "org.${project.properties.compileOnlyGroup}:${project.properties.compileOnlyVersion}"
   implementation "org.${project.properties.compileGroup}:${project.properties.compileVersion}"
 }

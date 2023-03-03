@@ -1,1 +1,1 @@
-org.opensearch.common.xcontent.XContentOpenSearchExtension
+com.colasoft.opensearch.common.xcontent.XContentOpenSearchExtension

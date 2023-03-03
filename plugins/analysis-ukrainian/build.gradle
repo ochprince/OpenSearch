@@ -31,7 +31,7 @@ apply plugin: 'opensearch.yaml-rest-test'
 
 opensearchplugin {
   description 'The Ukrainian Analysis plugin integrates the Lucene UkrainianMorfologikAnalyzer into opensearch.'
-  classname 'org.opensearch.plugin.analysis.ukrainian.AnalysisUkrainianPlugin'
+  classname 'com.colasoft.opensearch.plugin.analysis.ukrainian.AnalysisUkrainianPlugin'
 }
 
 dependencies {

@@ -28,19 +28,19 @@
  * under the License.
  */
 
-import org.opensearch.gradle.MavenFilteringHack
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.InternalClusterTestPlugin
+import com.colasoft.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.InternalClusterTestPlugin
 
-import static org.opensearch.gradle.PropertyNormalization.DEFAULT
-import static org.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
+import static com.colasoft.opensearch.gradle.PropertyNormalization.DEFAULT
+import static com.colasoft.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
 
 apply plugin: 'opensearch.yaml-rest-test'
 apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'The Azure Repository plugin adds support for Azure storage repositories.'
-  classname 'org.opensearch.repositories.azure.AzureRepositoryPlugin'
+  classname 'com.colasoft.opensearch.repositories.azure.AzureRepositoryPlugin'
 }
 
 dependencies {

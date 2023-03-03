@@ -29,11 +29,11 @@
  */
 
 
-import org.opensearch.gradle.MavenFilteringHack
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.AntFixture
+import com.colasoft.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.AntFixture
 
-import static org.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
+import static com.colasoft.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
 
 apply plugin: 'opensearch.yaml-rest-test'
 
@@ -54,7 +54,7 @@ task gceFixture(type: AntFixture) {
   dependsOn project.sourceSets.yamlRestTest.runtimeClasspath
   env 'CLASSPATH', "${-> project.sourceSets.yamlRestTest.runtimeClasspath.asPath}"
   executable = "${BuildParams.runtimeJavaHome}/bin/java"
-  args 'org.opensearch.cloud.gce.GCEFixture', baseDir, "${buildDir}/testclusters/yamlRestTest-1/config/unicast_hosts.txt"
+  args 'com.colasoft.opensearch.cloud.gce.GCEFixture', baseDir, "${buildDir}/testclusters/yamlRestTest-1/config/unicast_hosts.txt"
 }
 
 Map<String, Object> expansions = [

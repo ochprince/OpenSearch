@@ -33,14 +33,14 @@ apply plugin: 'opensearch.yaml-rest-test'
 opensearchplugin {
   name 'painless-whitelist'
   description 'An example allowlisting additional classes and methods in painless'
-  classname 'org.opensearch.example.painlesswhitelist.MyWhitelistPlugin'
+  classname 'com.colasoft.opensearch.example.painlesswhitelist.MyWhitelistPlugin'
   extendedPlugins = ['lang-painless']
   licenseFile rootProject.file('licenses/APACHE-LICENSE-2.0.txt')
   noticeFile rootProject.file('NOTICE.txt')
 }
 
 dependencies {
-  compileOnly "org.opensearch.plugin:opensearch-scripting-painless-spi:${versions.opensearch}"
+  compileOnly "com.colasoft.opensearch.plugin:opensearch-scripting-painless-spi:${versions.opensearch}"
 }
 
 testClusters.all {

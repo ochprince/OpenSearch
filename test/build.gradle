@@ -29,5 +29,5 @@
  */
 
 subprojects {
-  group = 'org.opensearch.test'
+  group = 'com.colasoft.opensearch.test'
 }

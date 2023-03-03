@@ -407,14 +407,14 @@ You can further customize your fat-JAR by customising the plugin, More informati
 
 To use the generated JAR, install the JAR locally, e.g.
 ```
-mvn install:install-file -Dfile=src/main/resources/opensearch-rest-high-level-client-1.4.0-SNAPSHOT.jar -DgroupId=org.opensearch.client -DartifactId=opensearch-rest-high-level-client -Dversion=1.4.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
+mvn install:install-file -Dfile=src/main/resources/opensearch-rest-high-level-client-1.4.0-SNAPSHOT.jar -DgroupId=com.colasoft.opensearch.client -DartifactId=opensearch-rest-high-level-client -Dversion=1.4.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
 ```
 
 Refer the installed JAR as any other maven artifact, e.g.
 
 ```
 <dependency>
-    <groupId>org.opensearch.client</groupId>
+    <groupId>com.colasoft.opensearch.client</groupId>
     <artifactId>opensearch-rest-high-level-client</artifactId>
     <version>1.4.0-SNAPSHOT</version>
 </dependency>

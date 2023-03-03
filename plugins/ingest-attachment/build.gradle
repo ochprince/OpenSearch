@@ -28,13 +28,13 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: 'opensearch.yaml-rest-test'
 
 opensearchplugin {
   description 'Ingest processor that uses Apache Tika to extract contents'
-  classname 'org.opensearch.ingest.attachment.IngestAttachmentPlugin'
+  classname 'com.colasoft.opensearch.ingest.attachment.IngestAttachmentPlugin'
 }
 
 versions << [

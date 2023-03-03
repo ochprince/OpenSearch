@@ -28,9 +28,9 @@
  * under the License.
  */
 
-import org.opensearch.gradle.PropertyNormalization
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.AntFixture
+import com.colasoft.opensearch.gradle.PropertyNormalization
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.AntFixture
 
 apply plugin: 'opensearch.yaml-rest-test'
 apply plugin: 'opensearch.internal-cluster-test'
@@ -38,7 +38,7 @@ apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'Module for URL repository'
-  classname 'org.opensearch.plugin.repository.url.URLRepositoryPlugin'
+  classname 'com.colasoft.opensearch.plugin.repository.url.URLRepositoryPlugin'
 }
 
 restResources {
@@ -58,7 +58,7 @@ task urlFixture(type: AntFixture) {
   }
   env 'CLASSPATH', "${-> project.sourceSets.test.runtimeClasspath.asPath}"
   executable = "${BuildParams.runtimeJavaHome}/bin/java"
-  args 'org.opensearch.repositories.url.URLFixture', baseDir, "${repositoryDir.absolutePath}"
+  args 'com.colasoft.opensearch.repositories.url.URLFixture', baseDir, "${repositoryDir.absolutePath}"
 }
 yamlRestTest {
   dependsOn urlFixture

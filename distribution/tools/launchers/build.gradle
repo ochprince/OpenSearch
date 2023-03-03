@@ -48,7 +48,7 @@ testingConventions {
   naming.clear()
   naming {
     Tests {
-      baseClass 'org.opensearch.tools.launchers.LaunchersTestCase'
+      baseClass 'com.colasoft.opensearch.tools.launchers.LaunchersTestCase'
     }
   }
 }

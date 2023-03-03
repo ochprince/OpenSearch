@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: 'opensearch.build'
 apply plugin: 'com.netflix.nebula.optional-base'
@@ -93,7 +93,7 @@ dependencies {
   api project(':libs:opensearch-x-content')
   api project(":libs:opensearch-geo")
 
-  // java.lang.NoClassDefFoundError: org/opensearch/plugins/ExtendedPluginsClassLoader
+  // java.lang.NoClassDefFoundError: com/colasoft/opensearch/plugins/ExtendedPluginsClassLoader
   // compileOnly -> api
   api project(':libs:opensearch-plugin-classloader')
   testRuntimeOnly project(':libs:opensearch-plugin-classloader')
@@ -140,10 +140,10 @@ dependencies {
 
   testImplementation(project(":test:framework")) {
     // tests use the locally compiled version of server
-    exclude group: 'org.opensearch', module: 'server'
+    exclude group: 'com.colasoft.opensearch', module: 'server'
   }
   internalClusterTestImplementation(project(":test:framework")) {
-    exclude group: 'org.opensearch', module: 'server'
+    exclude group: 'com.colasoft.opensearch', module: 'server'
   }
 }
 
@@ -173,8 +173,8 @@ tasks.named("testingConventions").configure {
             baseClass "org.apache.lucene.tests.util.LuceneTestCase"
         }
         IT {
-            baseClass "org.opensearch.test.OpenSearchIntegTestCase"
-            baseClass "org.opensearch.test.OpenSearchSingleNodeTestCase"
+            baseClass "com.colasoft.opensearch.test.OpenSearchIntegTestCase"
+            baseClass "com.colasoft.opensearch.test.OpenSearchSingleNodeTestCase"
         }
     }
 }
@@ -310,8 +310,8 @@ tasks.named("thirdPartyAudit").configure {
 tasks.named("dependencyLicenses").configure {
     mapping from: /lucene-.*/, to: 'lucene'
     dependencies = project.configurations.runtimeClasspath.fileCollection {
-        it.group.startsWith('org.opensearch') == false ||
-                // keep the following org.opensearch jars in
+        it.group.startsWith('com.colasoft.opensearch') == false ||
+                // keep the following com.colasoft.opensearch jars in
                 (it.name == 'jna' ||
                         it.name == 'securesm')
     }
@@ -319,11 +319,11 @@ tasks.named("dependencyLicenses").configure {
 
 tasks.named("licenseHeaders").configure {
     // Ignore our vendored version of Google Guice
-    excludes << 'org/opensearch/common/inject/**/*'
+    excludes << 'com/colasoft/opensearch/common/inject/**/*'
     // Ignore temporary copies of impending 8.7 Lucene classes
     excludes << 'org/apache/lucene/search/RegExp87*'
     excludes << 'org/apache/lucene/search/RegexpQuery87*'
-    excludes << 'org/opensearch/client/documentation/placeholder.txt'
+    excludes << 'com/colasoft/opensearch/client/documentation/placeholder.txt'
 }
 
 tasks.test {

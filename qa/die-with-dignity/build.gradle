@@ -9,15 +9,15 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.util.GradleUtils
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.util.GradleUtils
 
 apply plugin: 'opensearch.java-rest-test'
 apply plugin: 'opensearch.opensearchplugin'
 
 opensearchplugin {
   description 'Die with dignity plugin'
-  classname 'org.opensearch.DieWithDignityPlugin'
+  classname 'com.colasoft.opensearch.DieWithDignityPlugin'
 }
 
 // let the javaRestTest see the classpath of main

@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: "opensearch.publish"
 
@@ -37,7 +37,7 @@ dependencies {
   api project(':libs:opensearch-core')
 
   testImplementation(project(":test:framework")) {
-    exclude group: 'org.opensearch', module: 'opensearch-ssl-config'
+    exclude group: 'com.colasoft.opensearch', module: 'opensearch-ssl-config'
   }
 
   testImplementation "com.carrotsearch.randomizedtesting:randomizedtesting-runner:${versions.randomizedrunner}"

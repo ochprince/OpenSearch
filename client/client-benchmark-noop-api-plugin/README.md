@@ -19,5 +19,5 @@ The plugin provides two REST endpoints:
 
 The corresponding transport actions are:
 
-* `org.opensearch.plugin.noop.action.bulk.TransportNoopBulkAction`
-* `org.opensearch.plugin.noop.action.search.TransportNoopSearchAction`
+* `com.colasoft.opensearch.plugin.noop.action.bulk.TransportNoopBulkAction`
+* `com.colasoft.opensearch.plugin.noop.action.search.TransportNoopSearchAction`

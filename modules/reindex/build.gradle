@@ -29,9 +29,9 @@
  */
 
 import org.apache.tools.ant.taskdefs.condition.Os
-import org.opensearch.gradle.Architecture
-import org.opensearch.gradle.OS
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.Architecture
+import com.colasoft.opensearch.gradle.OS
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: 'opensearch.test-with-dependencies'
 apply plugin: 'opensearch.jdk-download'
@@ -41,7 +41,7 @@ apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'The Reindex module adds APIs to reindex from one index to another or update documents in place.'
-  classname 'org.opensearch.index.reindex.ReindexPlugin'
+  classname 'com.colasoft.opensearch.index.reindex.ReindexPlugin'
   hasClientJar = true
 }
 

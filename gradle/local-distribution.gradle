@@ -34,7 +34,7 @@
  * The local distribution will be installed to
  * build/distributions/local
  * */
-import org.opensearch.gradle.Architecture
+import com.colasoft.opensearch.gradle.Architecture
 
 apply plugin:'opensearch.internal-distribution-download'
 

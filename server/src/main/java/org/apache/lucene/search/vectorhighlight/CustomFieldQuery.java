@@ -43,9 +43,9 @@ import org.apache.lucene.search.PhraseQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.SynonymQuery;
 import org.apache.lucene.search.TermQuery;
-import org.opensearch.common.lucene.search.MultiPhrasePrefixQuery;
-import org.opensearch.common.lucene.search.function.FunctionScoreQuery;
-import org.opensearch.index.search.OpenSearchToParentBlockJoinQuery;
+import com.colasoft.opensearch.common.lucene.search.MultiPhrasePrefixQuery;
+import com.colasoft.opensearch.common.lucene.search.function.FunctionScoreQuery;
+import com.colasoft.opensearch.index.search.OpenSearchToParentBlockJoinQuery;
 
 import java.io.IOException;
 import java.util.Collection;
