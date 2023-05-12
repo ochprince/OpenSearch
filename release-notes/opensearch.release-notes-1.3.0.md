@@ -370,11 +370,11 @@
 
     [Ankit Jain](mailto:jain.ankitk@gmail.com) - Fri, 11 Feb 2022 09:36:21 -0500
 
-    * Stabilizing org.opensearch.cluster.routing.MovePrimaryFirstTests.test…
+    * Stabilizing com.colasoft.opensearch.cluster.routing.MovePrimaryFirstTests.test…
     (#2048)
 
     * Stabilizing
-    org.opensearch.cluster.routing.MovePrimaryFirstTests.testClusterGreenAfterPartialRelocation
+    com.colasoft.opensearch.cluster.routing.MovePrimaryFirstTests.testClusterGreenAfterPartialRelocation
 
      Signed-off-by: Ankit Jain &lt;jain.ankitk@gmail.com&gt;
 
@@ -768,7 +768,7 @@
      Signed-off-by: Nicholas Walter Knize &lt;nknize@apache.org&gt;
 
 
-* __Fixing org.opensearch.common.network.InetAddressesTests.testForStringIPv6WithScopeIdInput (#1913) (#1914)__
+* __Fixing com.colasoft.opensearch.common.network.InetAddressesTests.testForStringIPv6WithScopeIdInput (#1913) (#1914)__
 
     [Andriy Redko](mailto:andriy.redko@aiven.io) - Sat, 15 Jan 2022 10:14:17 -0600
 

@@ -44,10 +44,10 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.PrefixQuery;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.util.BytesRef;
-import org.opensearch.common.CheckedSupplier;
-import org.opensearch.common.Nullable;
-import org.opensearch.common.lucene.search.MultiPhrasePrefixQuery;
-import org.opensearch.index.IndexSettings;
+import com.colasoft.opensearch.common.CheckedSupplier;
+import com.colasoft.opensearch.common.Nullable;
+import com.colasoft.opensearch.common.lucene.search.MultiPhrasePrefixQuery;
+import com.colasoft.opensearch.index.IndexSettings;
 
 import java.io.IOException;
 import java.text.BreakIterator;

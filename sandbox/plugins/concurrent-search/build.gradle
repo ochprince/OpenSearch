@@ -33,7 +33,7 @@ apply plugin: 'opensearch.yaml-rest-test'
 opensearchplugin {
   name 'concurrent-search'
   description 'The experimental plugin which implements concurrent search over Apache Lucene segments'
-  classname 'org.opensearch.search.ConcurrentSegmentSearchPlugin'
+  classname 'com.colasoft.opensearch.search.ConcurrentSegmentSearchPlugin'
   licenseFile rootProject.file('licenses/APACHE-LICENSE-2.0.txt')
   noticeFile rootProject.file('NOTICE.txt')
 }

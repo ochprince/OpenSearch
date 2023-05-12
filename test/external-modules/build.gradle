@@ -10,7 +10,7 @@
  */
 
 
-import org.opensearch.gradle.info.BuildParams;
+import com.colasoft.opensearch.gradle.info.BuildParams;
 
 subprojects {
   apply plugin: 'opensearch.opensearchplugin'

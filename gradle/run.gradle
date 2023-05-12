@@ -27,7 +27,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import org.opensearch.gradle.testclusters.RunTask
+import com.colasoft.opensearch.gradle.testclusters.RunTask
 
 apply plugin: 'opensearch.testclusters'
 

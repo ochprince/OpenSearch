@@ -34,7 +34,7 @@ allprojects {
     }
 
     dependencies {
-      missingdoclet "org.opensearch:missing-doclet"
+      missingdoclet "com.colasoft.opensearch:missing-doclet"
     }
 
     ext {
@@ -262,8 +262,8 @@ class MissingJavadocTask extends DefaultTask {
     def opts = []
     opts << [ '-overview', project.file("${srcDirs[0]}/overview.html") ]
     opts << [ '-sourcepath', srcDirs.join(File.pathSeparator) ]
-    if (project.getGroup().toString().startsWith('org.opensearch')) {
-      opts << [ '-subpackages', 'org.opensearch']
+    if (project.getGroup().toString().startsWith('com.colasoft.opensearch')) {
+      opts << [ '-subpackages', 'com.colasoft.opensearch']
     } else {
       opts << [ '-subpackages', project.getGroup().toString()]
     }
@@ -289,7 +289,7 @@ class MissingJavadocTask extends DefaultTask {
     opts << [ '-tag', 'opensearch.experimental:a:WARNING: This API is experimental and might change in incompatible ways in the next release.' ]
     opts << [ '-tag', 'opensearch.internal:a:NOTE: This API is for internal purposes only and might change in incompatible ways in the next release.' ]
 
-    opts << [ '-doclet', "org.opensearch.missingdoclet.MissingDoclet" ]
+    opts << [ '-doclet', "com.colasoft.opensearch.missingdoclet.MissingDoclet" ]
     opts << [ '-docletpath', docletpath.asPath ]
     opts << [ '--missing-level', javadocMissingLevel ]
     if (javadocMissingIgnore) {

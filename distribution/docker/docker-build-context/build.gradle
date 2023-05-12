@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.DockerBase
+import com.colasoft.opensearch.gradle.DockerBase
 
 apply plugin: 'base'
 

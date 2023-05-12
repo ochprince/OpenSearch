@@ -28,8 +28,8 @@
  * under the License.
  */
 
-import org.opensearch.gradle.Architecture
-import org.opensearch.gradle.VersionProperties
+import com.colasoft.opensearch.gradle.Architecture
+import com.colasoft.opensearch.gradle.VersionProperties
 
 apply plugin: 'war'
 apply plugin: 'opensearch.build'

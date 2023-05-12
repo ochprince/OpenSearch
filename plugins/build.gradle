@@ -34,7 +34,7 @@ subprojects {
 
 // only configure immediate children of plugins dir
 configure(subprojects.findAll { it.parent.path == project.path }) {
-  group = 'org.opensearch.plugin'
+  group = 'com.colasoft.opensearch.plugin'
   apply plugin: 'opensearch.opensearchplugin'
 
   opensearchplugin {

@@ -33,7 +33,7 @@ apply plugin: 'opensearch.yaml-rest-test'
 opensearchplugin {
   name 'script-expert-scoring'
   description 'An example script engine to use low level Lucene internals for expert scoring'
-  classname 'org.opensearch.example.expertscript.ExpertScriptPlugin'
+  classname 'com.colasoft.opensearch.example.expertscript.ExpertScriptPlugin'
   licenseFile rootProject.file('licenses/APACHE-LICENSE-2.0.txt')
   noticeFile rootProject.file('NOTICE.txt')
 }

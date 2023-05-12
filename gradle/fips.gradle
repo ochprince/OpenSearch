@@ -9,9 +9,9 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.ExportOpenSearchBuildResourcesTask
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.testclusters.OpenSearchCluster
+import com.colasoft.opensearch.gradle.ExportOpenSearchBuildResourcesTask
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.testclusters.OpenSearchCluster
 
 // Common config when running with a FIPS-140 runtime JVM
 if (BuildParams.inFipsJvm) {

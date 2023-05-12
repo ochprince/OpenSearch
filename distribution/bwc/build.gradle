@@ -30,8 +30,8 @@
 
 apply plugin:"opensearch.internal-distribution-bwc-setup"
 
-import org.opensearch.gradle.Version
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.Version
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 
 BuildParams.getBwcVersions().forPreviousUnreleased { unreleasedVersion ->

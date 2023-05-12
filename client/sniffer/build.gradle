@@ -33,7 +33,7 @@ apply plugin: 'opensearch.publish'
 targetCompatibility = JavaVersion.VERSION_11
 sourceCompatibility = JavaVersion.VERSION_11
 
-group = 'org.opensearch.client'
+group = 'com.colasoft.opensearch.client'
 archivesBaseName = 'opensearch-rest-client-sniffer'
 
 dependencies {
@@ -79,7 +79,7 @@ testingConventions {
   naming.clear()
   naming {
     Tests {
-      baseClass 'org.opensearch.client.RestClientTestCase'
+      baseClass 'com.colasoft.opensearch.client.RestClientTestCase'
     }
   }
 }

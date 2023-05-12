@@ -7,7 +7,7 @@
  */
 
 configure(subprojects.findAll { it.parent.path == project.path }) {
-  group = 'org.opensearch.sandbox'
+  group = 'com.colasoft.opensearch.sandbox'
   apply plugin: 'opensearch.testclusters'
   apply plugin: 'opensearch.opensearchplugin'
 

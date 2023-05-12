@@ -61,3 +61,8 @@ testfixtures_shared/
 
 # build files generated
 doc-tools/missing-doclet/bin/
+
+# 自定义忽略
+home/
+gradle/wrapper/gradle-*.zip
+打包.md

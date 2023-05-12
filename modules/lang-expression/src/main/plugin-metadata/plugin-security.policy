@@ -35,12 +35,12 @@ grant {
   permission java.lang.RuntimePermission "createClassLoader";
 
   // expression runtime
-  permission org.opensearch.script.ClassPermission "java.lang.String";
-  permission org.opensearch.script.ClassPermission "org.apache.lucene.expressions.Expression";
-  permission org.opensearch.script.ClassPermission "org.apache.lucene.search.DoubleValues";
+  permission com.colasoft.opensearch.script.ClassPermission "java.lang.String";
+  permission com.colasoft.opensearch.script.ClassPermission "org.apache.lucene.expressions.Expression";
+  permission com.colasoft.opensearch.script.ClassPermission "org.apache.lucene.search.DoubleValues";
   // available functions
-  permission org.opensearch.script.ClassPermission "java.lang.Math";
-  permission org.opensearch.script.ClassPermission "org.apache.lucene.util.MathUtil";
-  permission org.opensearch.script.ClassPermission "org.apache.lucene.util.SloppyMath";
-  permission org.opensearch.script.ClassPermission "org.apache.lucene.expressions.js.ExpressionMath";
+  permission com.colasoft.opensearch.script.ClassPermission "java.lang.Math";
+  permission com.colasoft.opensearch.script.ClassPermission "org.apache.lucene.util.MathUtil";
+  permission com.colasoft.opensearch.script.ClassPermission "org.apache.lucene.util.SloppyMath";
+  permission com.colasoft.opensearch.script.ClassPermission "org.apache.lucene.expressions.js.ExpressionMath";
 };

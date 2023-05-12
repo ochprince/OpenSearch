@@ -9,12 +9,16 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 import org.jetbrains.gradle.ext.Remote
 import org.jetbrains.gradle.ext.JUnit
 
 buildscript {
   repositories {
+    maven {
+      allowInsecureProtocol(true)
+      url 'http://192.168.0.9:8081/nexus/content/groups/public'
+    }
     maven {
       url "https://plugins.gradle.org/m2/"
     }

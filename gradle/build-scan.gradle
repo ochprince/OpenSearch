@@ -9,8 +9,8 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.OS
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.OS
+import com.colasoft.opensearch.gradle.info.BuildParams
 import org.gradle.initialization.BuildRequestMetaData
 
 import java.util.concurrent.TimeUnit

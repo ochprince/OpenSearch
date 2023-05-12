@@ -91,7 +91,7 @@ else
 fi
 
 # check the Java version
-"$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" org.opensearch.tools.java_version_checker.JavaVersionChecker
+"$JAVA" "$XSHARE" -cp "$OPENSEARCH_CLASSPATH" com.colasoft.opensearch.tools.java_version_checker.JavaVersionChecker
 
 export HOSTNAME=$HOSTNAME
 
@@ -127,7 +127,7 @@ if [[ "$OPENSEARCH_DISTRIBUTION_TYPE" == "docker" ]]; then
   #
   # will cause OpenSearch to be invoked with -Ecluster.name=testcluster
   #
-  # see https://opensearch.org/docs/opensearch/configuration/ 
+  # see https://opensearch.org/docs/opensearch/configuration/
 
   declare -a opensearch_arg_array
 

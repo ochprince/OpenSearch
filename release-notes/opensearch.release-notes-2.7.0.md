@@ -50,7 +50,7 @@
 - Increased visibility of BaseRestHandler’s `unrecognized` method using a new public `unrecognizedStrings` method. ([#7125](https://github.com/opensearch-project/OpenSearch/pull/7125))
 
 ### Deprecated
-- Map, List, and Set in org.opensearch.common.collect ([#6609](https://github.com/opensearch-project/OpenSearch/pull/6609))
+- Map, List, and Set in com.colasoft.opensearch.common.collect ([#6609](https://github.com/opensearch-project/OpenSearch/pull/6609))
 
 ### Fixed
 - Added depth check in doc parser for deep nested document ([#5199](https://github.com/opensearch-project/OpenSearch/pull/5199))

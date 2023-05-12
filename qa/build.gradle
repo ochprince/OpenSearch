@@ -9,8 +9,8 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.test.RestIntegTestTask
-import org.opensearch.gradle.testclusters.TestClustersPlugin
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.testclusters.TestClustersPlugin
 
 subprojects { Project subproj ->
   subproj.tasks.withType(RestIntegTestTask) {

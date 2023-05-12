@@ -45,7 +45,7 @@
   public key and uses the .sig files that are published to the artifacts site.
   Signed-off-by: Nicholas Walter Knize &lt;nknize@apache.org&gt;
 
-* __Fix org.opensearch.index.reindex.ReindexRestClientSslTests#testClientSucceedsWithCertificateAuthorities - javax.net.ssl.SSLPeerUnverifiedException (#1212) (#1224)__
+* __Fix com.colasoft.opensearch.index.reindex.ReindexRestClientSslTests#testClientSucceedsWithCertificateAuthorities - javax.net.ssl.SSLPeerUnverifiedException (#1212) (#1224)__
 
   [Andriy Redko](mailto:andriy.redko@aiven.io) - Fri, 10 Sep 2021 11:49:33 -0400
 

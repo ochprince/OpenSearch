@@ -28,14 +28,14 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: 'opensearch.yaml-rest-test'
 apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'The EC2 discovery plugin allows to use AWS API for the unicast discovery mechanism.'
-  classname 'org.opensearch.discovery.ec2.Ec2DiscoveryPlugin'
+  classname 'com.colasoft.opensearch.discovery.ec2.Ec2DiscoveryPlugin'
 }
 
 dependencies {

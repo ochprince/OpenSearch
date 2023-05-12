@@ -28,9 +28,9 @@
  * under the License.
  */
 
-import org.opensearch.gradle.Version
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
+import com.colasoft.opensearch.gradle.Version
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
 
 apply plugin: 'opensearch.testclusters'
 apply plugin: 'opensearch.standalone-test'
@@ -76,7 +76,7 @@ for (Version bwcVersion : BuildParams.bwcVersions.indexCompatible) {
     systemProperty 'tests.rest.suite', 'step2'
   }
 
-  // Step 3 and Step 4 registered for versions for OpenSearch 
+  // Step 3 and Step 4 registered for versions for OpenSearch
   // since the ES cluster would not be able to read snapshots from OpenSearch cluster in Step 3.
   if (bwcVersion.after('7.10.2')) {
     tasks.register("${baseName}#Step3OldClusterTest", StandaloneRestIntegTestTask) {

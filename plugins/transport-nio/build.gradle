@@ -28,14 +28,14 @@
  * under the License.
  */
 
-import org.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.info.BuildParams
 
 apply plugin: "opensearch.publish"
 apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'The nio transport.'
-  classname 'org.opensearch.transport.nio.NioTransportPlugin'
+  classname 'com.colasoft.opensearch.transport.nio.NioTransportPlugin'
   hasClientJar = true
 }
 

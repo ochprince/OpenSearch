@@ -34,7 +34,7 @@ dependencies {
   api 'org.jruby.jcodings:jcodings:1.0.58'
 
   testImplementation(project(":test:framework")) {
-    exclude group: 'org.opensearch', module: 'opensearch-grok'
+    exclude group: 'com.colasoft.opensearch', module: 'opensearch-grok'
   }
 }
 

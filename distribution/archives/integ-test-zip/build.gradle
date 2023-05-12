@@ -27,7 +27,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import org.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.MavenFilteringHack
 
 apply plugin: 'opensearch.standalone-rest-test'
 apply plugin: 'opensearch.rest-test'
@@ -36,7 +36,7 @@ apply plugin: 'opensearch.rest-test'
 apply plugin: 'opensearch.publish'
 apply plugin: 'com.netflix.nebula.maven-publish'
 
-group = "org.opensearch.distribution.integ-test-zip"
+group = "com.colasoft.opensearch.distribution.integ-test-zip"
 
 integTest {
   dependsOn assemble

@@ -30,7 +30,7 @@
 
 opensearchplugin {
   description 'A test module that allows to delay aggregations on shards with a configurable time'
-  classname 'org.opensearch.search.aggregations.DelayedShardAggregationPlugin'
+  classname 'com.colasoft.opensearch.search.aggregations.DelayedShardAggregationPlugin'
 }
 
 restResources {

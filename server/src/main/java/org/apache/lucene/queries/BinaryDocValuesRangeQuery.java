@@ -45,8 +45,8 @@ import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.TwoPhaseIterator;
 import org.apache.lucene.search.Weight;
 import org.apache.lucene.util.BytesRef;
-import org.opensearch.common.io.stream.BytesStreamInput;
-import org.opensearch.index.mapper.RangeType;
+import com.colasoft.opensearch.common.io.stream.BytesStreamInput;
+import com.colasoft.opensearch.index.mapper.RangeType;
 
 import java.io.IOException;
 import java.util.Objects;

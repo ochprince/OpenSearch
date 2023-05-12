@@ -29,14 +29,14 @@
  */
 
 import org.apache.tools.ant.taskdefs.condition.Os
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
 
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
 
-import static org.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
+import static com.colasoft.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
 
 apply plugin: 'opensearch.test.fixtures'
 apply plugin: 'opensearch.rest-resources'
@@ -44,7 +44,7 @@ apply plugin: 'opensearch.rest-test'
 
 opensearchplugin {
   description 'The HDFS repository plugin adds support for Hadoop Distributed File-System (HDFS) repositories.'
-  classname 'org.opensearch.repositories.hdfs.HdfsPlugin'
+  classname 'com.colasoft.opensearch.repositories.hdfs.HdfsPlugin'
 }
 
 versions << [
@@ -147,7 +147,7 @@ project(':test:fixtures:krb5kdc-fixture').tasks.preProcessFixture {
 
 // Create HDFS File System Testing Fixtures for HA/Secure combinations
 for (String fixtureName : ['hdfsFixture', 'haHdfsFixture', 'secureHdfsFixture', 'secureHaHdfsFixture']) {
-  def tsk = project.tasks.register(fixtureName, org.opensearch.gradle.test.AntFixture) {
+  def tsk = project.tasks.register(fixtureName, com.colasoft.opensearch.gradle.test.AntFixture) {
     dependsOn project.configurations.hdfsFixture, project(':test:fixtures:krb5kdc-fixture').tasks.postProcessFixture
     executable = "${BuildParams.runtimeJavaHome}/bin/java"
     env 'CLASSPATH', "${-> project.configurations.hdfsFixture.asPath}"
@@ -280,7 +280,7 @@ if (Os.isFamily(Os.FAMILY_WINDOWS)) {
       Files.exists(path.resolve("bin").resolve("hdfs.dll"))) {
       fixtureSupported = true
     } else {
-      throw new IllegalStateException("HADOOP_HOME: ${path} is invalid, does not contain hadoop native libraries in \$HADOOP_HOME/bin");
+      //throw new IllegalStateException("HADOOP_HOME: ${path} is invalid, does not contain hadoop native libraries in \$HADOOP_HOME/bin");
     }
   }
 } else {

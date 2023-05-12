@@ -255,7 +255,7 @@
      Signed-off-by: Saurabh Singh &lt;sisurab@amazon.com&gt;
      Co-authored-by: Saurabh Singh &lt;sisurab@amazon.com&gt;
 
-* __[BUG] Fix org.opensearch.action.admin.cluster.node.stats.NodeStatsTests.testSerialization (#1399)__
+* __[BUG] Fix com.colasoft.opensearch.action.admin.cluster.node.stats.NodeStatsTests.testSerialization (#1399)__
 
     [Andriy Redko](mailto:andriy.redko@aiven.io) - Thu, 21 Oct 2021 09:16:15 -0400
 

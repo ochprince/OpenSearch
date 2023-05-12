@@ -72,7 +72,7 @@
     * Replace with a new tagline &#34;The OpenSearch Project: https://opensearch.org/&#34;.
 
     * Turn the tagline into a constant in
-    server/src/main/java/org/opensearch/action/main/MainResponse.java.
+    server/src/main/java/com/colasoft/opensearch/action/main/MainResponse.java.
 
     Signed-off-by: Tianli Feng &lt;ftianli@amazon.com&gt;
 

@@ -12,17 +12,17 @@
 import java.nio.file.Files
 import java.security.KeyPair
 import java.security.KeyPairGenerator
-import org.opensearch.gradle.MavenFilteringHack
-import org.opensearch.gradle.info.BuildParams
-import org.opensearch.gradle.test.RestIntegTestTask
-import org.opensearch.gradle.test.rest.YamlRestTestPlugin
-import org.opensearch.gradle.test.InternalClusterTestPlugin
+import com.colasoft.opensearch.gradle.MavenFilteringHack
+import com.colasoft.opensearch.gradle.info.BuildParams
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.test.rest.YamlRestTestPlugin
+import com.colasoft.opensearch.gradle.test.InternalClusterTestPlugin
 
 import java.nio.file.Files
 import java.security.KeyPair
 import java.security.KeyPairGenerator
 
-import static org.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
+import static com.colasoft.opensearch.gradle.PropertyNormalization.IGNORE_VALUE
 /*
  * Licensed to Elasticsearch under one or more contributor
  * license agreements. See the NOTICE file distributed with
@@ -46,7 +46,7 @@ apply plugin: 'opensearch.internal-cluster-test'
 
 opensearchplugin {
   description 'The GCS repository plugin adds Google Cloud Storage support for repositories.'
-  classname 'org.opensearch.repositories.gcs.GoogleCloudStoragePlugin'
+  classname 'com.colasoft.opensearch.repositories.gcs.GoogleCloudStoragePlugin'
 }
 
 versions << [
