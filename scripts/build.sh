@@ -73,13 +73,13 @@ fi
 mkdir -p $OUTPUT/maven/com/colasoft/opensearch
 
 # Build project and publish to maven local.
-./gradlew publishToMavenLocal -Dbuild.snapshot=$SNAPSHOT -Dbuild.version_qualifier=$QUALIFIER
+#./gradlew publishToMavenLocal -Dbuild.snapshot=$SNAPSHOT -Dbuild.version_qualifier=$QUALIFIER
 
 # Publish to existing test repo, using this to stage release versions of the artifacts that can be released from the same build.
-./gradlew publishNebulaPublicationToTestRepository -Dbuild.snapshot=$SNAPSHOT -Dbuild.version_qualifier=$QUALIFIER
+#./gradlew publishNebulaPublicationToTestRepository -Dbuild.snapshot=$SNAPSHOT -Dbuild.version_qualifier=$QUALIFIER
 
 # Copy maven publications to be promoted
-cp -r ./build/local-test-repo/com/colasoft/opensearch "${OUTPUT}"/maven/org
+#cp -r ./build/local-test-repo/com/colasoft/opensearch "${OUTPUT}"/maven/org
 
 # Assemble distribution artifact
 # see https://github.com/opensearch-project/OpenSearch/blob/main/settings.gradle#L34 for other distribution targets
