@@ -129,7 +129,7 @@ class ClusterFormationTasks {
             if (i < config.numBwcNodes) {
                 opensearchVersion = config.bwcVersion.toString()
                 if (project.bwcVersions.unreleased.contains(config.bwcVersion)) {
-                    opensearchVersion += "-SNAPSHOT"
+                    //opensearchVersion += "-SNAPSHOT"
                 }
                 distro = bwcDistro
             } else {

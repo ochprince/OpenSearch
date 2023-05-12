@@ -86,6 +86,8 @@ tasks.validateNebulaPom.dependsOn tasks.generatePomFileForShadowPublication
 tasks.validateShadowPom.dependsOn tasks.generatePomFileForNebulaPublication
 tasks.publishNebulaPublicationToMavenLocal.dependsOn tasks.generatePomFileForShadowPublication
 tasks.publishShadowPublicationToMavenLocal.dependsOn tasks.generatePomFileForNebulaPublication
+tasks.generatePomFileForShadowPublication.dependsOn tasks.publishNebulaPublicationToReleaseRepository
+tasks.publishNebulaPublicationToTestRepository.dependsOn tasks.generatePomFileForShadowPublication
 
 tasks.named("dependencyLicenses").configure {
   mapping from: /asm-.*/, to: 'asm'

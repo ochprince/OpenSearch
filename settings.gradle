@@ -15,7 +15,7 @@ plugins {
 
 buildCache {
   local {
-    enabled = true
+    enabled = false
     removeUnusedEntriesAfterDays = 14
   }
 }

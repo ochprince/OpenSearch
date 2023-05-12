@@ -60,7 +60,7 @@ public class Distribution {
         this.hasJdk = filename.contains("no-jdk") == false;
         String version = filename.split("-", 3)[1];
         if (filename.contains("-SNAPSHOT")) {
-            version += "-SNAPSHOT";
+            //version += "-SNAPSHOT";
         }
         this.version = version;
     }

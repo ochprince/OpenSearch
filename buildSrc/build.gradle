@@ -314,7 +314,7 @@ class VersionPropertiesLoader {
     final String buildSnapshotSystemProperty = systemProperties.getProperty("build.snapshot", "true");
     switch (buildSnapshotSystemProperty) {
       case "true":
-        opensearch += "-SNAPSHOT"
+        //opensearch += "-SNAPSHOT"
         break;
       case "false":
         // do nothing
