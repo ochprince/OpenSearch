@@ -40,7 +40,7 @@ apply plugin: 'opensearch.internal-distribution-archive-setup'
 
 CopySpec archiveFiles(CopySpec modulesFiles, String distributionType, String platform, String architecture, boolean jdk) {
   return copySpec {
-    into("opensearch-${version}") {
+    into("colasearch-${version}") {
       into('lib') {
         with libFiles()
       }
